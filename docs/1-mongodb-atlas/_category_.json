@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "In this section, you will get up and running, creating your Atlas account and spinning up your first database."
+    "description": "In this section, you will get up and running. Also you will get infortmation about the MongoDB Cluster for you to use during the session. You all will be connecting to the same cluster but with individual user names. If you have been part of the Data Modelling Session before and already have a cluster you can skip this part."
   }
 }
