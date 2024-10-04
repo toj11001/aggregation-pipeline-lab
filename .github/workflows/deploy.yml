@@ -6,6 +6,8 @@ on:
       - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -20,6 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      - name: Install Search Pluin
+        run: npm install @cmfcmf/docusaurus-search-local
       - name: Build website
         run: npm run build
 
