@@ -22,8 +22,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-      - name: Install Search Pluin
-        run: npm install @cmfcmf/docusaurus-search-local
       - name: Build website
         run: npm run build
 
