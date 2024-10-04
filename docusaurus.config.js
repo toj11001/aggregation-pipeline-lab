@@ -6,7 +6,7 @@
 // Name of the Github Repo, it's also teh baseUrl
 const workshopName = 'aggregation-pipeline-lab';
 // Change this if hosting outside mongodb-developer
-const organizationName = "mongodb-developer";
+const organizationName = "toj11001";
 
 // Main page config
 const title = "Aggregation Pipeline Lab";
