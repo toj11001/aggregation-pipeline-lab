@@ -13,7 +13,7 @@ From the [aggregation pipelines manual](https://www.mongodb.com/docs/manual/refe
 
 So we can repeat most stages, and do something like this to get all books from 1985 with more than 100 pages (although it may or may not make sense):
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -41,7 +41,7 @@ db.books.aggregate([
 <summary>Answer</summary>
 <div>
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {$match: {pages: {$gte: 100}}}, 

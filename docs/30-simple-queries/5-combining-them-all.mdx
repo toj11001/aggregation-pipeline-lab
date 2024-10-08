@@ -8,7 +8,7 @@ Up until now, we've just been using one stage in the pipeline. But the power of 
 Get 5 books from 2001 with more than 50 pages. Show only the title and authors.
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   { $match: { year: 2001, pages: {$gt: 50 } } },
@@ -37,7 +37,7 @@ We're using here the greater than `$gt` operator. You have `$gt`, `$gte`, `$lt`,
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   { $match: { year: 1985, pages: { $lt: 150 } } },

@@ -21,13 +21,13 @@ The `<expression>` portion of the $match stage can be any valid MongoDB expressi
 ## Matching book documents
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 
-    First, make sure you select the `books` collection in the Atlas UI. 
-    <Screenshot src="/img/30-simple-queries/select-books-collection.png" url="http://cloud.mongodb.com/" alt="Atlas UI database deployment with the books collection highlighted." />
+    First, make sure you select the `books` collection in the Compass UI. 
+    <Screenshot src="/img/30-simple-queries/select-books-collection.png" url="http://cloud.mongodb.com/" alt="Compass UI database deployment with the books collection highlighted." />
 
     Then, navigate to the `Aggregation` tab and click `</> TEXT`.
-    <Screenshot src="/img/30-simple-queries/new-aggregation.png" url="http://cloud.mongodb.com/" alt="Atlas UI database deployment with aggregation tab highlighted." />
+    <Screenshot src="/img/30-simple-queries/new-aggregation.png" url="http://cloud.mongodb.com/" alt="Compass UI database deployment with aggregation tab highlighted." />
 
     Say we want all the books from the year 2010. We can add a `$match` stage to filter the documents from the books collection:
 
@@ -63,7 +63,7 @@ The `<expression>` portion of the $match stage can be any valid MongoDB expressi
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -95,7 +95,7 @@ If we need to add more conditions using AND, we use the `$and` operator.
 If we want all the books with 100 pages and with exactly `totalInventory` 1, we can use the `$and` operator. It takes an array of documents with all the conditions that should be true for the AND to succeed:
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -140,7 +140,7 @@ IF pages == 100 AND totalInventory == 1 {
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -180,7 +180,7 @@ db.books.aggregate([
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {
@@ -216,7 +216,7 @@ db.books.aggregate(
 We can do an implicit AND just passing a document with all the conditions (instead of an array of documents):
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -244,7 +244,7 @@ db.books.aggregate([
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {
