@@ -62,7 +62,7 @@ import TabItem from '@theme/TabItem';
 如果我们只对书名感兴趣，我们可以使用 `$project` 选择我们感兴趣的字段。例如，要只获取书名和年份，我们可以这样写：
 
 <Tabs groupId="project">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -85,7 +85,7 @@ db.books.aggregate([{$project: {title: 1, year: 1}}])
 所以我们可以排除字段，并显示除 `attributes` 之外的所有字段：
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -108,7 +108,7 @@ db.books.aggregate([{$project: {attributes: 0}}])
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {
@@ -135,7 +135,7 @@ db.books.aggregate([{$project: {title: 1, cover: 1}}])
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
   {

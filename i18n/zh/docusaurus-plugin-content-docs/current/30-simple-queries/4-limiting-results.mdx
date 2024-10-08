@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 如果我们返回了太多的文档，但我们只对其中的一部分感兴趣，我们可以使用 `$limit` 来限制返回的文档数量。
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     { $limit: 1 }
@@ -29,7 +29,7 @@ db.books.aggregate([{$limit: 1}])
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     { $limit: 7 }

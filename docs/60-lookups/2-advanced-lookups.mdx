@@ -16,7 +16,7 @@ You can try this with this aggregation pipeline:
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -56,7 +56,7 @@ So we need to convert from `String` into `ObjectId`. We can do that using `$toOb
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -90,7 +90,7 @@ db.books.aggregate([
 - Now, we're ready to do the `$lookup`: We want all documents from `authors` that have the same `_id` as the `authorId` we just created. We use a `pipeline` to get just `authors` `name` and `bio`.
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [

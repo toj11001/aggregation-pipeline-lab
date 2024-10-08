@@ -21,13 +21,13 @@ $match 操作符中的 `<expression>` 部分可以是任何有效的 MongoDB 表
 ## 匹配书籍文档
 
 <Tabs groupId="aggregations-year">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 
-    首先，确保在 Atlas UI 中选择 `books` 集合。
-    <Screenshot src="/img/30-simple-queries/select-books-collection.png" url="http://cloud.mongodb.com/" alt="Atlas UI 数据库部署，突出显示 books 集合。" />
+    首先，确保在 Compass UI 中选择 `books` 集合。
+    <Screenshot src="/img/30-simple-queries/select-books-collection.png" url="http://cloud.mongodb.com/" alt="Compass UI 数据库部署，突出显示 books 集合。" />
 
     然后，导航到 `Aggregation` 选项卡并点击 `Add Stage`。
-    <Screenshot src="/img/30-simple-queries/new-aggregation.png" url="http://cloud.mongodb.com/" alt="Atlas UI 数据库部署，突出显示聚合选项卡。" />
+    <Screenshot src="/img/30-simple-queries/new-aggregation.png" url="http://cloud.mongodb.com/" alt="Compass UI 数据库部署，突出显示聚合选项卡。" />
 
     假设我们想要所有 2010 年的书籍。我们可以添加一个 `$match` 阶段来过滤 books 集合中的文档：
 
@@ -58,7 +58,7 @@ $match 操作符中的 `<expression>` 部分可以是任何有效的 MongoDB 表
 <div>
 
 <Tabs groupId="aggregations-pages">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```
 [
     {
@@ -85,7 +85,7 @@ db.books.aggregate([{$match: {pages: 100}}])
 如果我们想要所有有 100 页并且 `totalInventory` 恰好为 2 的书籍，我们可以使用 `$and` 操作符。这个操作符接受一个包含所有条件的文档数组，这些条件都必须为真，AND 操作才会成功：
 
 <Tabs groupId="aggregations-and">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```
 [
     {
@@ -120,7 +120,7 @@ return matching docs
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {
@@ -150,7 +150,7 @@ db.books.aggregate([{$match: {$and: [{pages: 100}, {year: 2015}]}}])
 <div>
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {
@@ -181,7 +181,7 @@ db.books.aggregate([{$match: {$and: [{pages: 100}, {year: 2015}]}}]).itcount()
 我们可以通过传递包含所有条件的文档来进行隐式 AND（而不是文档数组）：
 
 <Tabs groupId="aggregations-shorthand-and">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {
@@ -204,7 +204,7 @@ db.books.aggregate([{$match: {pages: 100, totalInventory: 2}}])
 <div>
 
 <Tabs groupId="aggregations-shorthand-and-exercise">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```js
 [
     {

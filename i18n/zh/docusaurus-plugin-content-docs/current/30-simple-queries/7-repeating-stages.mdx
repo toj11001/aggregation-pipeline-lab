@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 因此我们可以重复大多数阶段，并做类似于以下操作，以获取1985年且页数超过100页的所有书籍（尽管这可能有意义或没有意义）
 
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 
 ```
 [
@@ -41,7 +41,7 @@ db.books.aggregate([{$match: {pages: {$gte: 100}}}, {$match: {year: 1985}}])
 <summary>答案</summary>
 <div>
 <Tabs groupId="aggregations">
-  <TabItem value="atlas" label="Atlas UI">
+  <TabItem value="atlas" label="Compass UI">
 ```
 [
     {$match: {pages: {$gte: 100}}}, 

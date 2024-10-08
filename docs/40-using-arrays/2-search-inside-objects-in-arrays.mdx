@@ -37,7 +37,7 @@ attributes: [
 How do we search for all the books that have an msrp of 9.99? We want books that, inside `attributes`, have an object with key `msrp` and value `9.99`. We can get it to work with this:
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 ```js
 [
   { $unwind : "$attributes" },
@@ -65,7 +65,7 @@ Here we're getting a copy of each book for each object inside the `$attributes` 
 👐 To better understand `$unwind`, run this aggregation.
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 You need to select the `books` collection.
 
@@ -94,7 +94,7 @@ You should get one document per attribute of the original book. All fields in th
 But you can actually match documents in an array in a more straightforward fashion:
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 ```js
 [
   { $match: {"attributes.key": "msrp", "attributes.value": 9.99} },

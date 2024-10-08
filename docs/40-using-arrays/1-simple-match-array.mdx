@@ -9,7 +9,7 @@ A JSON array can contain scalar values or objects. In our data, `authors` have a
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 Remember to select the `authors` collection in the UI.
 
@@ -51,7 +51,7 @@ I got this one. (It can change depending on the data source you imported.)
 Can I get all authors for book `0002005018`? For that, I want all authors that have `0002005018` inside the `books` array. Turns out it's quite simple:
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -78,7 +78,7 @@ db.authors.aggregate([
 <div>
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 
 ```js
@@ -114,7 +114,7 @@ What if we want to know how many aliases an author has? To do that, we can use `
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -149,7 +149,7 @@ db.authors.aggregate([
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [

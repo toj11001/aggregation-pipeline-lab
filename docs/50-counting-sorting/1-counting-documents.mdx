@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 How can we be sure that this pipeline is returning exactly 15 books?
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -42,7 +42,7 @@ By counting the books! Let's add a new stage to the pipeline to count those book
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
@@ -93,7 +93,7 @@ Here, `$count` will count the resulting docs and will return a document with jus
 
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 ```js
 [ {$count: "authorCount"} ]
 ```
@@ -117,7 +117,7 @@ db.authors.aggregate([{$count: "authorCount"}])
 If we count after the `$match` stage, the document we're passing to the next steps contains only the `totalBooks` field. So the `$project` stage will return an empty document.
 
 <Tabs groupId="aggregations">
-<TabItem value="atlas" label="Atlas UI">
+<TabItem value="atlas" label="Compass UI">
 
 ```js
 [
